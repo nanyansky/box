@@ -23,7 +23,9 @@ import me.jessyan.autosize.AutoSizeConfig;
 import me.jessyan.autosize.unit.Subunits;
 
 import java.util.ArrayList;
+import java.util.HashMap; // 新增
 import java.util.List;
+import java.util.Map;      // 新增
 
 import static com.xuexiang.xupdate.entity.UpdateError.ERROR.CHECK_NO_NEW_VERSION;
 
@@ -190,8 +192,8 @@ public class App extends MultiDexApplication {
         // 默认线路地址
         String defaultApiName = "自备份线路";
         String defaultApi = url + URL.DEFAULT_API_URL;
-        // Map<String, String> defaultApiMap = Hawk.get(HawkConfig.API_MAP, new HashMap<>());
-        Map<String, String> defaultApiMap = new HashMap<>();
+        Map<String, String> defaultApiMap = Hawk.get(HawkConfig.API_MAP, new HashMap<>());
+        // Map<String, String> defaultApiMap = new HashMap<>();
         defaultApiMap.put(defaultApiName, defaultApi);
         List<String> defaultApiHistory = Hawk.get(HawkConfig.API_NAME_HISTORY, new ArrayList<>());
         defaultApiHistory.add(defaultApiName);
