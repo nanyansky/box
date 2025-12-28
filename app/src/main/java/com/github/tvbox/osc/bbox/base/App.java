@@ -190,7 +190,8 @@ public class App extends MultiDexApplication {
         // 默认线路地址
         String defaultApiName = "自备份线路";
         String defaultApi = url + URL.DEFAULT_API_URL;
-        Map<String, String> defaultApiMap = Hawk.get(HawkConfig.API_MAP, new HashMap<>());
+        // Map<String, String> defaultApiMap = Hawk.get(HawkConfig.API_MAP, new HashMap<>());
+        Map<String, String> defaultApiMap = new HashMap<>();
         defaultApiMap.put(defaultApiName, defaultApi);
         List<String> defaultApiHistory = Hawk.get(HawkConfig.API_NAME_HISTORY, new ArrayList<>());
         defaultApiHistory.add(defaultApiName);
